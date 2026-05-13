@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="lab05_S11-12_zirel/lab05_S11-12_zirel.vcxproj" />
+</Solution>
