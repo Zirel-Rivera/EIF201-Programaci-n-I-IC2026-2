@@ -28,6 +28,9 @@ namespace EIF201 {
         void   simularTurnos(int n);
         void   imprimirRotacion() const;
 
+        void imprimirEstadisticas() const;
+        string LocutorMasActivo() const;
+
         int  getCantidad() const;
         bool estaVacia()   const;
     };

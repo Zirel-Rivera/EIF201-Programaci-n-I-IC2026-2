@@ -132,6 +132,7 @@ namespace EIF201 {
     string RotacionCircular::siguiente() {
         if (cola == nullptr) { return ""; }
         cola = cola->siguiente;
+        getCabeza()->turnosAsignados;
         return getCabeza()->nombre;
     }
 
@@ -153,6 +154,39 @@ namespace EIF201 {
             if (actual != cabeza) { cout << " -> "; }
         } while (actual != cabeza);
         cout << " -> (inicio)" << endl;
+    }
+
+    void RotacionCircular::imprimirEstadisticas() const {
+
+        if (cola == nullptr) { 
+            cout << "Esta vacia" << endl;
+            return; 
+        }
+
+        NodoLocutor* actual = cola->siguiente;
+
+        do {
+            cout << " Locutor: " << actual->nombre
+                << " Turnos: " << actual->turnosAsignados << endl;
+            actual = actual->siguiente;
+        } while (actual != cola->siguiente);
+    }
+
+    string RotacionCircular::LocutorMasActivo() const
+    {
+        if (cola == nullptr) { return ""; }
+
+        NodoLocutor* actual = cola->siguiente;
+        NodoLocutor* masActivo = cola->siguiente;
+
+        do {
+            if (actual->turnosAsignados > masActivo->turnosAsignados) {
+                masActivo = actual;
+            }
+            actual = actual->siguiente;
+        } while (actual != cola->siguiente);
+
+        return masActivo->nombre;
     }
 
     int RotacionCircular::getCantidad() const { return cantidad; }
