@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="lab06-S13-mathewA_zirel/lab06-S13-mathewA_zirel.vcxproj" />
+  <Project Path="lab06-S13-mathewA_zirel/lab06-S13-mathewA_zirel.vcxproj" Id="335da78d-1347-414b-83b7-c5080748fd41" />
 </Solution>
