@@ -10,7 +10,7 @@ class AnalisisAves
 {
 private:
 	
-	void imprimirInversoAuc(NodoAve* cab) const;
+	void imprimirInversoAux(NodoAve* cab) const;
 	NodoAve* maxAux(NodoAve* cab, NodoAve* mejor) const;
 
 public:
@@ -18,7 +18,7 @@ public:
 
 	int contar(NodoAve* cab)const;
 	double sumaPesos(NodoAve* cab) const;
-	int contarEspecie(NodoAve*, const std::string& especie) const;
+	int contarEspecie(NodoAve* cab, const std::string& especie) const;
 	bool existeEspecie(NodoAve* cab, const std::string& especie) const;
 	NodoAve* aveMasPesada(NodoAve* cab) const;
 	void imprimirCronologico(NodoAve* cab) const;
