@@ -2,7 +2,19 @@
 #include <iostream>
 
 namespace EIF201 {
-	
+	void AnalisisAves::imprimirInversoAux(NodoAve* cab) const
+	{
+		if (cab == nullptr)
+			return;
+
+		imprimirInverso(cab->siguiente);
+
+		std::cout << cab->anillo << " "
+			<< cab->especie << " "
+			<< cab->peso << " "
+			<< cab->sexo << " "
+			<< cab->fecha << "\n ";
+	}
 	NodoAve* AnalisisAves::maxAux(NodoAve* cab, NodoAve* mejor) const
 	{
 		if (cab == nullptr)
@@ -69,23 +81,14 @@ namespace EIF201 {
 			<< cab->especie << " "
 			<< cab->peso << " "
 			<< cab->sexo << " "
-			<< cab->fecha << "/n ";
+			<< cab->fecha << "\n ";
 
 		imprimirCronologico(cab->siguiente);
 			
 	}
-	void AnalisisAves::imprimirInversoAux(NodoAve* cab) const
+	void AnalisisAves::imprimirInverso(NodoAve* cab) const
 	{
-		if (cab == nullptr)
-			return;
-
-		imprimirInverso(cab->siguiente);
-
-		std::cout << cab->anillo << " "
-			<< cab->especie << " "
-			<< cab->peso << " "
-			<< cab->sexo << " "
-			<< cab->fecha << "/n ";
+		imprimirInversoAux(cab);
 	}
 
 }
