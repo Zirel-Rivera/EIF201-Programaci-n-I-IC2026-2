@@ -22,7 +22,7 @@ public:
 	bool existeEspecie(NodoAve* cab, const std::string& especie) const;
 	NodoAve* aveMasPesada(NodoAve* cab) const;
 	void imprimirCronologico(NodoAve* cab) const;
-	void imprimirInverso(NodoAve* cab) const;
+	void imprimirInverso(NodoAve* cab) const; 
 };
 
 }
