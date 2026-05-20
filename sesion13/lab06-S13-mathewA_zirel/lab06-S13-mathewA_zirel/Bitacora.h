@@ -36,7 +36,7 @@ namespace EIF201 {
 
 
 
-#endif BITACORA_H
+#endif 
 
 
 

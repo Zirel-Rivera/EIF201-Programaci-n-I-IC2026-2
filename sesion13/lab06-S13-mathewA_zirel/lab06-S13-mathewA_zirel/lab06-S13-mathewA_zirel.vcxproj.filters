@@ -39,4 +39,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="datos\anillamientos.txt">
+      <Filter>Archivos de encabezado</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
