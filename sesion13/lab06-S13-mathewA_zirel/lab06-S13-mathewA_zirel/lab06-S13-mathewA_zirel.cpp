@@ -13,4 +13,5 @@ int main()
     else {
         std::cout << "Error al registrar\n";
     }
+
 }
