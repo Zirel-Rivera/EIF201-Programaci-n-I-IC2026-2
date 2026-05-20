@@ -7,7 +7,7 @@ namespace EIF201 {
 		if (cab == nullptr)
 			return;
 
-		imprimirInverso(cab->siguiente);
+		imprimirInversoAux(cab->siguiente);
 
 		std::cout << cab->anillo << " "
 			<< cab->especie << " "
@@ -21,12 +21,15 @@ namespace EIF201 {
 			return mejor;
 
 		if (cab->peso > mejor->peso)
-			return nullptr;
+			return maxAux(cab->siguiente, cab);
+		else
+			return maxAux(cab->siguiente, mejor);
 	}
+
 	int AnalisisAves::contar(NodoAve* cab) const
 	{
 		if (cab == nullptr) {
-			return;
+			return 0;
 		}
 		return 1 + contar(cab->siguiente);
 	}
@@ -68,7 +71,7 @@ namespace EIF201 {
 		if (cab == nullptr)
 			return nullptr;
 
-		maxAux(cab, cab);
+		return maxAux(cab, cab);
 
 	}
 
